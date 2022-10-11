@@ -48,21 +48,10 @@ export class ClubOrderRouter {
 
                 const xl = require('excel4node');
                 const wb = new xl.Workbook();
-                const ws = wb.addWorksheet('Worksheet Name');
-
-                const headingColumnNames = [
-                    "customer_id",
-                    "product_id",
-                    "order_id",
-                    "first_name",
-                    "last_name",
-                    "price",
-                    "product_name",
-                    "total_amount",
-                ]
+                const ws = wb.addWorksheet('Cluborders');
 
                 let headingColumnIndex = 1;
-                headingColumnNames.forEach(heading => {
+                Object.keys[clubOrders].forEach(heading => {
                     ws.cell(1, headingColumnIndex++)
                         .string(heading)
                 });

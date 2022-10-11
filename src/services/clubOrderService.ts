@@ -76,8 +76,7 @@ export class ClubOrderRouter {
                     });
                     rowIndex++;
                 });
-                // wb.write('cluborder.xlsx');
-                waterfallCallback(null, wb.write('cluborder.xlsx'))
+                waterfallCallback(null, wb.write('cluborder.csv'))
             }
         ], function (err, result) {
             callback(err, result)

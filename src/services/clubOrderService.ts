@@ -25,7 +25,7 @@ export class ClubOrderRouter {
                         })
                     },
                     orderDetails: function (parallelCallback: Function) {
-                        commonService.findAll({ where: {} }, models.Order, function (err: Error, response: any) {
+                        commonService.findAll({ where: {} }, models.OrderDetail, function (err: Error, response: any) {
                             parallelCallback(err, response);
                         })
                     },
